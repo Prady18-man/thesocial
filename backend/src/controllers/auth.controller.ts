@@ -18,7 +18,7 @@ export class Authcontroller {
             }
              return res.send({
                 posts: "List of posts",
-                
+
                 userdata: data,
             });
         });
@@ -28,6 +28,8 @@ export class Authcontroller {
         let {username,useremail,userpassword} = req.body;
         let jwt_secret_key =""+process.env.JWT_SECRET_KEY  ;
 
+
+        
 
         let isEmailValidator = EmailValidator.validate(useremail);
         if(!isEmailValidator){
