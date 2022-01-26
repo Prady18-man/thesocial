@@ -4,6 +4,7 @@ import * as EmailValidator from "email-validator"
 import dotenv from "dotenv";
 
 dotenv.config();
+//controller 
 export class Authcontroller {
     static async showPosts(req: Request, res: Response){
         let jwt_secret_key =""+ process.env.JWT_SECRET_KEY;
@@ -17,6 +18,7 @@ export class Authcontroller {
             }
              return res.send({
                 posts: "List of posts",
+                
                 userdata: data,
             });
         });
