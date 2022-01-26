@@ -3,7 +3,6 @@ import {Authcontroller}  from "../controllers/auth.controller";
 
 const authrouter = Router();
 
-authrouter.get("/posts",  Authcontroller.showPosts);
-authrouter.post("/signup",Authcontroller.signup);
+authrouter.post("/signup",Authcontroller.createNewAccount);
 
 export {authrouter};
